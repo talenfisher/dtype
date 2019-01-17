@@ -20,7 +20,8 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "postversion": "git push --follow-tags && npm publish"
   },
   "dependencies": {},
   "devDependencies": {
