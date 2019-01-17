@@ -7,6 +7,9 @@ where you would like instantiate a typed array of the same `array.dtype`.
 
 See [ndarray-dtype](https://www.npmjs.com/package/ndarray-dtype) if you need to support Buffer and other ndarray types.
 
+# Fork modifications
+* Added support for single letter strings (D, F, J, I, see table below)
+
 ## example
 
 ```js
@@ -26,13 +29,13 @@ var newarr = ndarray(new (dtype(arr.dtype)))
 Data type | String
 --------: | :-----
 `Int8Array` | "int8"
-`Int16Array` | "int16"
-`Int32Array` | "int32"
+`Int16Array` | "int16" or "i"
+`Int32Array` | "int32" or "l"
 `Uint8Array` | "uint8"
 `Uint16Array` | "uint16"
 `Uint32Array` | "uint32"
-`Float32Array` | "float32"
-`Float64Array` | "float64"
+`Float32Array` | "float32" or "f"
+`Float64Array` | "float64" or "d"
 `Array` | "array"
 `Uint8ClampedArray` | "uint8_clamped"
 
@@ -43,7 +46,7 @@ Returns `undefined` if the type isn't recognized.
 With [npm](https://npmjs.org) do:
 
 ```
-npm install dtype
+npm install @talenfisher/dtype
 ```
 
 Use [browserify](http://browserify.org) to `require('dtype')`.
